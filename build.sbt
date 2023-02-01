@@ -1,8 +1,9 @@
 import Dependencies._
 
-ThisBuild / scalaVersion     := "3.2.1"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
-ThisBuild / organization     := "fr.davit"
+ThisBuild / crossScalaVersions := Seq("3.2.1", "2.13.10")
+ThisBuild / scalaVersion       := (ThisBuild / crossScalaVersions).value.head
+ThisBuild / version            := "0.1.0-SNAPSHOT"
+ThisBuild / organization       := "fr.davit"
 
 lazy val root = (project in file("."))
   .settings(
